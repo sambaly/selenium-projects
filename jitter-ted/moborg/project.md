@@ -1,7 +1,5 @@
 #MboOrg
 
-(License: Apache 2.0)
-
 This project manages Remote Mob Programming sessions:
 
 * Registration
@@ -13,3 +11,18 @@ This project manages Remote Mob Programming sessions:
 * Dashboard
   + Create a new session
   + See sessions and how many registrations
+
+1. See existing sessions
+   - Session name
+   - Session date/time (including time zone)
+   - Number of people registered
+   - Participant details
+     - Name
+     - Github username
+     - Email address
+     - Discord username
+     - New to group ?
+
+Go to /dashboard, we'll see existing sessions
+
+2. Create new session
