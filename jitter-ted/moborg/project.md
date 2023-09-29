@@ -1,21 +1,23 @@
 #MboOrg
 
-This project manages Remote Mob Programming huddles:
+This project manages Remote Mob Programming huddleSummaryViews:
 
 * Registration
   + Info for participants: name, Github username, email address, Discord username
-  + Limit registration to 5 per huddle
+  + Limit registration to 5 per huddleSummaryView
   + Integrate with Calendars
   + Integrate with Github for adding collaborators to the repo
   + Integrate with MobTi.me
 * Dashboard
-  + Create a new huddle
-  + See huddles and how many registrations
+  + Create a new huddleSummaryView
+  + See huddleSummaryViews and how many registrations
 
-1. See existing huddles
-   - huddle name
-   - huddle date/time (including time zone)
+1. See existing huddleSummaryViews
+   - huddleSummaryView name
+   - huddleSummaryView date/time (including time zone)
    - Number of people registered
+
+2. View details of a huddle
    - Participant details
      - Name
      - Github username
@@ -23,6 +25,4 @@ This project manages Remote Mob Programming huddles:
      - Discord username
      - New to group ?
 
-Go to /dashboard, we'll see existing huddles
-
-2. Create new huddle
+3. Create new huddleSummaryView
