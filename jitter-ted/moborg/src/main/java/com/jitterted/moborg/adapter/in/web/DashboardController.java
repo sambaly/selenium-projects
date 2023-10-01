@@ -18,4 +18,17 @@ public class DashboardController {
         model.addAttribute("huddles", List.of(huddleSummaryView));
         return "dashboard";
     }
+
+    @GetMapping("/huddle")
+    public String huddleDetailView(Model model) {
+        HuddleDetailView huddleDetailView = new HuddleDetailView(
+                "Name",
+                "04/24/2021 10am PDT",
+                "90 minutes",
+                "Blackjack",
+                4
+        );
+        model.addAttribute("huddle", huddleDetailView);
+        return "huddle-detail";
+    }
 }
