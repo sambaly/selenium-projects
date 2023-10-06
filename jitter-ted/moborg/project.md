@@ -25,4 +25,6 @@ This project manages Remote Mob Programming huddles:
      - Discord username
      - New to group ?
 
+   - Goals of the huddle (i.e., what's the mission) 
+
 3. Create new huddle

@@ -14,7 +14,7 @@ public class MoborgApplication {
 
 	@Bean
 	public HuddleService huddleService() {
-		return new HuddleService();
+		return new HuddleService(null);
 	}
 
 }

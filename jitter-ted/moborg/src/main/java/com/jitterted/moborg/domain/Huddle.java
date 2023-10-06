@@ -5,7 +5,7 @@ import java.time.ZonedDateTime;
 public class Huddle {
     private final String name;
     private final ZonedDateTime startDateTime;
-    private int numberRegistered;
+    private int numberRegistered = 0;
 
     public Huddle(String name, ZonedDateTime startDateTime) {
         this.name = name;
