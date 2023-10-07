@@ -3,7 +3,7 @@
   <head>
       <meta charset="UTF-8">
       <title>MobOrg Dashboard</title>
-      <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+      <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
     <style>
       table {
         width: 100%;
@@ -45,7 +45,8 @@
       </tr>
       </tbody>
   </table>
-  <form action="/schedule" method="post" th:object="${scheduleHuddleForm}">
+  <hr>
+  <form action="#" method="post" th:action="@{/schedule}" th:object="${scheduleHuddleForm}">
       <div>Name: <input th:field="*{name}" type="text"></div>
       <div>Date: <input th:field="*{date}" type="date"></div>
       <div>Time: <input th:field="*{time}" type="time"></div>
