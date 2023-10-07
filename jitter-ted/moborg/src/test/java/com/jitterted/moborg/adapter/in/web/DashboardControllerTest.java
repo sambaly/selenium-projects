@@ -10,12 +10,12 @@ import org.springframework.ui.Model;
 import java.time.ZonedDateTime;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class DashboardControllerTest {
 
     @Test
-    public void givenOneHuddleResultsInHuddlePutIntoModel() throws Exception {
+    public void givenOneHuddleResultsInHuddleInViewModel() throws Exception {
         InMemoryHuddleRepository huddleRepository = new InMemoryHuddleRepository();
         HuddleService huddleService = new HuddleService(huddleRepository);
         huddleRepository.save(new Huddle("Name", ZonedDateTime.now()));
@@ -28,6 +28,21 @@ class DashboardControllerTest {
         List<HuddleSummaryView> huddleSummaryViews = (List<HuddleSummaryView>) model.getAttribute("huddles");
 
         assertThat(huddleSummaryViews).hasSize(1);
+    }
+
+    @Test
+    public void scheduleNewHuddleResultsInHuddleCreatedInRepository() throws Exception {
+        InMemoryHuddleRepository huddleRepository = new InMemoryHuddleRepository();
+        HuddleService huddleService = new HuddleService(huddleRepository);
+        DashboardController dashboardController = new DashboardController(huddleService);
+
+        String pageName = dashboardController.scheduleHuddle(
+                new ScheduleHuddleForm("Name", "2021-04-30", "10:00"));
+
+        assertThat(pageName)
+                .isEqualTo("redirect:/dashboard");
+        assertThat(huddleRepository.findAll())
+                .hasSize(1);
     }
 
 }

@@ -45,5 +45,13 @@
       </tr>
       </tbody>
   </table>
+  <form action="/schedule" method="post" th:object="${scheduleHuddleForm}">
+      <div>Name: <input th:field="*{name}" type="text"></div>
+      <div>Date: <input th:field="*{date}" type="date"></div>
+      <div>Time: <input th:field="*{time}" type="time"></div>
+      <div>
+          <button type="submit">Schedule New Huddle</button>
+      </div>
+  </form>
   </body>
 </html>
