@@ -23,4 +23,16 @@ class DateTimeFormattingTest {
                                 ZoneId.of("Africa/Dakar")));
     }
 
+    @Test
+    public void dateTimeFormattedAsMonthDayYear12HourTime() throws Exception {
+        ZonedDateTime zonedDateTime = ZonedDateTime.of(2021, 4, 30,
+                9, 0, 0, 0,
+                ZoneId.of("Africa/Dakar"));
+
+        String formattedDateTime = DateTimeFormatting.formatAsDateTime(zonedDateTime);
+
+        assertThat(formattedDateTime)
+                .isEqualTo("04/30/2021 09:00 AM");
+    }
+
 }

@@ -15,7 +15,7 @@ public class DateTimeFormatting {
         return ZonedDateTime.of(localDateTime, ZoneId.of("Africa/Dakar"));
     }
 
-    public static String formatAsDate(LocalDateTime localDateTime) {
-        return DateTimeFormatter.ofPattern("MM/DD/yyyy").format(localDateTime);
+    public static String formatAsDateTime(ZonedDateTime zonedDateTime) {
+        return DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm a").format(zonedDateTime);
     }
 }
